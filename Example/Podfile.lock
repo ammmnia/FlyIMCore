@@ -1,0 +1,16 @@
+PODS:
+  - FlyIMCore (0.0.3)
+
+DEPENDENCIES:
+  - FlyIMCore (from `../`)
+
+EXTERNAL SOURCES:
+  FlyIMCore:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FlyIMCore: 9da59b6fb3f33c652d834010aadcb4c8ffcf657a
+
+PODFILE CHECKSUM: 7d8bf46bb8077b3f12481d40cfde0e5db64a8776
+
+COCOAPODS: 1.15.2

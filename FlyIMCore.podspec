@@ -102,5 +102,6 @@ Pod::Spec.new do |spec|
   }
   
   spec.vendored_frameworks = 'Framework/*.xcframework'
+  spec.libraries = "resolv"
 
 end
