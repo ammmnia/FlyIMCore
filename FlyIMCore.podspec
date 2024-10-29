@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint FlyIMCore.podspec' to ensure this is a
+#  Be sure to run `pod spec lint OpenIMCore.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "FlyIMCore"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of FlyIMCore."
+  spec.summary      = "Fly-IM-SDK-Core"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-    Instant Message
+    FlyIM：由前技术专家打造的基于 Go 实现的即时通讯（IM）项目，iOS版本IM SDK 可以轻松替代第三方IM云服务，打造具备聊天、社交功能的app。
                    DESC
 
-  spec.homepage     = "http://github.com/FlyIMCore"
+  spec.homepage     = "https://github.com/AbubakerM/OpenIMCore"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,8 +39,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "LICENSE"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  # spec.license      = "MIT (example)"
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -53,8 +53,11 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "example" => "example@gmail.com" }
-  
+  spec.author             = { "Abubaker" => "abubker@peakperformances.io" }
+  # Or just: spec.author    = "Abubaker"
+  # spec.authors            = { "Abubaker" => "abubker@peakperformances.io" }
+  # spec.social_media_url   = "https://twitter.com/Abubaker"
+
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  If this Pod runs only on iOS or OS X, then specify the platform and
@@ -65,11 +68,10 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
+  spec.ios.deployment_target = "9.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
-  # spec.visionos.deployment_target = "1.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/ammmnia/FlyIMCore.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/AbubakerM/OpenIMCore.git", :tag => "#{spec.version.to_s}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,49 +91,16 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  # spec.exclude_files = "Classes/Exclude"
-
-  # spec.public_header_files = "Classes/**/*.h"
-  spec.vendored_frameworks = 'FlyIMCore.xcframework'
-
-
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
-  # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
-
-  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
-
-  # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
-
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
-  # spec.requires_arc = true
-
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
+  valid_archs = ['armv7s','arm64','x86_64']
+  
+  spec.xcconfig = {
+    'VALID_ARCHS' =>  valid_archs.join(' '),
+  }
+  
+  spec.pod_target_xcconfig = {
+    'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)'
+  }
+  
+  spec.vendored_frameworks = 'Framework/*.xcframework'
 
 end
