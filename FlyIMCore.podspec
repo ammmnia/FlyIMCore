@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
     FlyIM：由前技术专家打造的基于 Go 实现的即时通讯（IM）项目，iOS版本IM SDK 可以轻松替代第三方IM云服务，打造具备聊天、社交功能的app。
                    DESC
 
-  spec.homepage     = "https://github.com/AbubakerM/OpenIMCore"
+  spec.homepage     = "https://github.com/ammmnia/FlyIMCore"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/AbubakerM/OpenIMCore.git", :tag => "#{spec.version.to_s}" }
+  spec.source       = { :git => "https://github.com/ammmnia/FlyIMCore.git", :tag => "#{spec.version.to_s}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
