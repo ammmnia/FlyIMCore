@@ -1,16 +1,16 @@
 PODS:
-  - FlyIMCore (0.0.2)
+  - CarrotquestSDK (2.13.0-beta1)
 
 DEPENDENCIES:
-  - FlyIMCore (from `../`)
+  - CarrotquestSDK (= 2.13.0-beta1)
 
-EXTERNAL SOURCES:
-  FlyIMCore:
-    :path: "../"
+SPEC REPOS:
+  trunk:
+    - CarrotquestSDK
 
 SPEC CHECKSUMS:
-  FlyIMCore: 99755daef48625997df2ea845bdbc1850e2fa5d0
+  CarrotquestSDK: 75d0702d4b342591445f32f3e3869eb18c2714dc
 
-PODFILE CHECKSUM: 7d8bf46bb8077b3f12481d40cfde0e5db64a8776
+PODFILE CHECKSUM: c5e6a085846fb1cfe1789b98e3b0f29a230bf09f
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.0

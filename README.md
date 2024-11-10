@@ -23,3 +23,7 @@ pod init
 ```
 pod repo push mypods FlyIMCore.podspec --allow-warnings  
 ```
+
+```
+pod trunk push
+```
