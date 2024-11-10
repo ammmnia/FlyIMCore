@@ -18,7 +18,7 @@ pod repo add mypods https://github.com/ammmnia/pods.git
 pod init
 ```
 
-## 
+## 推送
 
 ```
 pod repo push mypods FlyIMCore.podspec --allow-warnings  
