@@ -18,11 +18,13 @@ pod repo add mypods https://github.com/ammmnia/pods.git
 pod init
 ```
 
-## 推送
+## 推送到私有仓库
 
+```shell
+pod repo push mypods FlyIMCore.podspec --allow-warnings --verbose --use-libraries
 ```
-pod repo push mypods FlyIMCore.podspec --allow-warnings  
-```
+
+## 推送到公共仓库
 
 ```
 pod trunk push
