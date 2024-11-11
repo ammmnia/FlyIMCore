@@ -24,8 +24,14 @@ pod init
 pod repo push mypods FlyIMCore.podspec --allow-warnings --verbose --use-libraries
 ```
 
+在podfile添加source
+
 ## 推送到公共仓库
 
-```
+```shell
 pod trunk push
+```
+
+```shell
+pod repo update mypods
 ```
