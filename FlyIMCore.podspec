@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "FlyIMCore"
-  spec.version      = "0.0.12"
+  spec.version      = "0.0.13"
   spec.summary      = "Fly-IM-SDK-Core"
 
   # This description is used to generate tags and improve search results.
@@ -24,8 +24,7 @@ Pod::Spec.new do |spec|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = "FlyIM: 基于 Go 实现的即时通讯(IM)项目,iOS版本IM SDK 可以轻松替代第三方IM云服务,打造具备聊天、社交功能的app"
-
+  spec.description  = "FlyIM: 基于 Go 实现的即时通讯(IM)项目"
   spec.homepage     = "https://github.com/ammmnia/FlyIMCore"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
