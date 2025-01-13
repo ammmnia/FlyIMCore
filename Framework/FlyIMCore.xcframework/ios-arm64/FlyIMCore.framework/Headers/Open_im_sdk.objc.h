@@ -326,7 +326,15 @@ FOUNDATION_EXPORT void Open_im_sdkSearchGroups(id<Open_im_sdk_callbackBase> _Nul
 
 FOUNDATION_EXPORT void Open_im_sdkSearchLocalMessages(id<Open_im_sdk_callbackBase> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable searchParam);
 
+/**
+ * SendForwardMessage 多条消息合并转发多人/群组
+ */
 FOUNDATION_EXPORT void Open_im_sdkSendForwardMessage(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable messageList, NSString* _Nullable title, NSString* _Nullable summaryList, NSString* _Nullable recvID, NSString* _Nullable groupID, NSString* _Nullable offlinePushInfo, BOOL isOnlineOnly);
+
+/**
+ * SendForwardMsg 单条消息转发多人/群组
+ */
+FOUNDATION_EXPORT void Open_im_sdkSendForwardMsg(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable message, NSString* _Nullable recvID, NSString* _Nullable groupID, NSString* _Nullable offlinePushInfo, BOOL isOnlineOnly);
 
 FOUNDATION_EXPORT void Open_im_sdkSendMessage(id<Open_im_sdk_callbackSendMsgCallBack> _Nullable callback, NSString* _Nullable operationID, NSString* _Nullable message, NSString* _Nullable recvID, NSString* _Nullable groupID, NSString* _Nullable offlinePushInfo, BOOL isOnlineOnly);
 
