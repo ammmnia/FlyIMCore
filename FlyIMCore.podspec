@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "FlyIMCore"
-  spec.version      = "0.0.50"
+  spec.version      = "0.0.51"
   spec.summary      = "Fly-IM-SDK-Core"
 
   # This description is used to generate tags and improve search results.
